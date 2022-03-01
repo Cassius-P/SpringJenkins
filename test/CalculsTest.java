@@ -71,7 +71,7 @@ class CalculsTest {
 			fail("Methode diviser non conforme 100 / 200 = 0.5 ne fonctionne pas.");
 		}
 		
-		assertEquals(c3.diviser(), 0.5);
+		assertEquals(c3.diviser(), (1/2));
 	}
 
 	/**
@@ -80,7 +80,7 @@ class CalculsTest {
 	@Test
 	void testSoustraire() {
 		if(c2.soustraire() != -10) {
-			fail("Methode additionner non conforme 2+1=3 ne fonctionne pas.");
+			fail("Methode soustraire non conforme 10 - 20 = -10 ne fonctionne pas.");
 		}
 		
 		assertEquals(c2.soustraire(), -10);
