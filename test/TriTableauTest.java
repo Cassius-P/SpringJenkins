@@ -23,11 +23,7 @@ public class TriTableauTest {
 	{
         TriTableau monTri = new TriTableau();
         monTri.triCroissant(t1);
-        for (int i = 0; i < t1.length; i++) {
-        	for (int j = 0; j < t2.length; j++) {
-        		assertEquals(t1[i], t2[j]);
-        	}
-        }
+        assertArrayEquals(t1, t2);
 	}
 	
 	/**
@@ -39,13 +35,9 @@ public class TriTableauTest {
 		try {
 	        TriTableau monTri = new TriTableau();
 	        monTri.triDecroissant(t1);
-	        for (int i = 0; i < t1.length; i++) {
-	        	for (int j = 0; j < t2.length; j++) {
-	        		assertEquals(t1[i], t3[j]);
-	        	}
-	        }
+	        assertArrayEquals(t1, t3);
 		} catch (ArrayIndexOutOfBoundsException e) {
-			fail(e);
+			System.out.println("---> FAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIIIIIIIIIIIIL " + e);
 		}
 	}
 }
