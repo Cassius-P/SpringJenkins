@@ -30,7 +30,7 @@ class CalculsTest2 {
         return Stream.of(
             Arguments.of(2,2,4), // appellera : testMultiplier(2,2,4)
             Arguments.of(6,6,36),
-            Arguments.of(3,2,3)
+            Arguments.of(3,2,6)
         );
     }
 
