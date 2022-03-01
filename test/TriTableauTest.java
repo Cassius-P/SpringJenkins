@@ -1,17 +1,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-
-import java.util.stream.Stream;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 
-import jenkins.Calculs;
 import jenkins.TriTableau;
 
 /**
@@ -46,12 +36,16 @@ public class TriTableauTest {
 	@Test
 	void testTriDecroissant() 
 	{
-        TriTableau monTri = new TriTableau();
-        monTri.triDecroissant(t1);
-        for (int i = 0; i < t1.length; i++) {
-        	for (int j = 0; j < t2.length; j++) {
-        		assertEquals(t1[i], t3[j]);
-        	}
-        }
+		try {
+	        TriTableau monTri = new TriTableau();
+	        monTri.triDecroissant(t1);
+	        for (int i = 0; i < t1.length; i++) {
+	        	for (int j = 0; j < t2.length; j++) {
+	        		assertEquals(t1[i], t3[j]);
+	        	}
+	        }
+		} catch (ArrayIndexOutOfBoundsException e) {
+			fail(e);
+		}
 	}
 }
