@@ -37,7 +37,7 @@ public class TriTableauTest {
 	        monTri.triDecroissant(t1);
 	        assertArrayEquals(t1, t3);
 		} catch (ArrayIndexOutOfBoundsException e) {
-			fail("###--> "
+			fail("###-->\n"
 					+ "[ERROR] Une ERREUR sauvage apparaît !\n"
 					+ "Nous sommes de retour\n"
 					+ "Pour vous jouer un mauvais tour\n"
