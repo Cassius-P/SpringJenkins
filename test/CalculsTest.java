@@ -42,10 +42,10 @@ class CalculsTest {
 	{
 		if(c1.multiplier() != 2)
 		{
-			fail("Methode multiplier non conforme 2*1=2 ne fonctionne pas.");
+			fail("Methode multiplier non conforme 2 * 1 = 2 ne fonctionne pas.");
 		}
 		
-		// Est ce que (2 == 42) ? non donc : test en Erreur
+		// Est ce que (2 == 42) ? non donc : test en Erreur ----- NANI ?
 		assertEquals(c1.multiplier(), 2);
 		
 	}
@@ -55,6 +55,11 @@ class CalculsTest {
 	 */
 	@Test
 	void testAdditionner() {
+		if(c1.additionner() != 3) {
+			fail("Methode additionner non conforme 2 + 1 = 3 ne fonctionne pas.");
+		}
+		
+		assertEquals(c1.additionner(), 3);
 	}
 
 	/**
@@ -62,7 +67,11 @@ class CalculsTest {
 	 */
 	@Test
 	void testDiviser() {
-		fail("Not yet implemented");
+		if(c3.diviser() != (1/2)) {
+			fail("Methode diviser non conforme 100 / 200 = 0.5 ne fonctionne pas.");
+		}
+		
+		assertEquals(c3.diviser(), 0.5);
 	}
 
 	/**
@@ -70,7 +79,11 @@ class CalculsTest {
 	 */
 	@Test
 	void testSoustraire() {
-		fail("Not yet implemented");
+		if(c2.soustraire() != -10) {
+			fail("Methode additionner non conforme 2+1=3 ne fonctionne pas.");
+		}
+		
+		assertEquals(c2.soustraire(), -10);
 	}
 
 }
