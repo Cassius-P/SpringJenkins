@@ -37,7 +37,18 @@ public class TriTableauTest {
 	        monTri.triDecroissant(t1);
 	        assertArrayEquals(t1, t3);
 		} catch (ArrayIndexOutOfBoundsException e) {
-			System.out.println("---> FAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIIIIIIIIIIIIIIIL " + e);
+			System.out.println("###--> Une ERREUR sauvage apparaît !\n"
+					+ "Nous sommes de retour\n"
+					+ "Pour vous jouer un mauvais tour\n"
+					+ "Afin de préserver le monde de la dévastation\n"
+					+ "Afin de rallier tous les peuples à notre nation\n"
+					+ "Afin d'écraser l'amour et la vérité\n"
+					+ "Afin d'étendre notre pouvoir jusqu'à la voie lactée\n"
+					+ "Jessie !\n"
+					+ "James !\n"
+					+ "La Team Rocket plus rapide que la lumière\n"
+					+ "Rendez-vous tous, ou ce sera la guerre\n"
+					+ "Miaouss, oui, la guerre !\n" + e);
 		}
 	}
 }
