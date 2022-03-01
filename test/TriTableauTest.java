@@ -39,17 +39,17 @@ public class TriTableauTest {
 		} catch (ArrayIndexOutOfBoundsException e) {
 			fail("###-->\n"
 					+ "[ERROR] Une ERREUR sauvage apparaît !\n"
-					+ "Nous sommes de retour\n"
-					+ "Pour vous jouer un mauvais tour\n"
-					+ "Afin de préserver le monde de la dévastation\n"
-					+ "Afin de rallier tous les peuples à notre nation\n"
-					+ "Afin d'écraser l'amour et la vérité\n"
-					+ "Afin d'étendre notre pouvoir jusqu'à la voie lactée\n"
-					+ "Jessie !\n"
-					+ "James !\n"
-					+ "La Team Rocket plus rapide que la lumière\n"
-					+ "Rendez-vous tous, ou ce sera la guerre\n"
-					+ "Miaouss, oui, la guerre !\n" + e);
+					+ "[ERROR] Nous sommes de retour\n"
+					+ "[ERROR] Pour vous jouer un mauvais tour\n"
+					+ "[ERROR] Afin de préserver le monde de la dévastation\n"
+					+ "[ERROR] Afin de rallier tous les peuples à notre nation\n"
+					+ "[ERROR] Afin d'écraser l'amour et la vérité\n"
+					+ "[ERROR] Afin d'étendre notre pouvoir jusqu'à la voie lactée\n"
+					+ "[ERROR] Jessie !\n"
+					+ "[ERROR] James !\n"
+					+ "[ERROR] La Team Rocket plus rapide que la lumière\n"
+					+ "[ERROR] Rendez-vous tous, ou ce sera la guerre\n"
+					+ "[ERROR] Miaouss, oui, la guerre !\n" + e);
 		}
 	}
 }
