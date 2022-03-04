@@ -6,27 +6,26 @@ package jenkins;
 import java.io.IOException;
 
 public class TriTableau
-{    
-    
+{
+
     public static void trier(int tab[]) throws IOException
     {
- 
         triCroissant(tab);
  
         for(int i=0; i<tab.length; i++)
         {
             System.out.println(tab[i]);
         }
- 
+
         triDecroissant(tab);
- 
+
         System.out.println("\n");
- 
+
         for(int i=0; i<tab.length; i++)
         {
             System.out.println(tab[i]);
         }
- 
+
     }
  
     public static void triCroissant(int tableau[]) {

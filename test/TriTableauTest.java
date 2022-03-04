@@ -1,8 +1,9 @@
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
-
 import jenkins.TriTableau;
+
+import java.util.logging.Logger;
+
 
 /**
  * @author YoYoYo Zetsubō Zetsubō
@@ -10,10 +11,12 @@ import jenkins.TriTableau;
  */
 
 public class TriTableauTest {
-	
-	private int[] t1 = {1,7,94,23,36,666,84,28,113};
-	private int[] t2 = {1,7,23,28,36,84,94,113,666};
-	private int[] t3 = {666,113,94,84,36,28,23,7,1};
+
+	Logger logger = Logger.getLogger("TriTableauTest");
+
+	private int[] tab1 = {20,40,10,0,80,30,60,50,90,70};
+	private int[] tab2 = {0,10,20,30,40,50,60,70,80,90};
+	private int[] tab3 = {90,80,70,60,50,40,30,20,10,0};
 
 	/**
 	 * Test method for {@link TriTableau#triCroissant(int[])}.
@@ -21,9 +24,17 @@ public class TriTableauTest {
 	@Test
 	void testTriCroissant() 
 	{
-        TriTableau monTri = new TriTableau();
-        monTri.triCroissant(t1);
-        assertArrayEquals(t1, t2);
+		try {
+			TriTableau.triCroissant(tab1);
+		} catch (IndexOutOfBoundsException e) {
+			logger.warning("Index max depassé \n");
+			fail(e.getMessage());
+		} catch (Exception e) {
+			logger.warning("Erreur");
+			e.printStackTrace();
+		}
+
+		assertArrayEquals(tab1, tab2, "Tableau trié incorrectement");
 	}
 	
 	/**
@@ -33,23 +44,14 @@ public class TriTableauTest {
 	void testTriDecroissant() 
 	{
 		try {
-	        TriTableau monTri = new TriTableau();
-	        monTri.triDecroissant(t1);
-	        assertArrayEquals(t1, t3);
-		} catch (ArrayIndexOutOfBoundsException e) {
-			fail("###-->\n"
-					+ "[ERROR] Une ERREUR sauvage apparaît !\n"
-					+ "[ERROR] Nous sommes de retour\n"
-					+ "[ERROR] Pour vous jouer un mauvais tour\n"
-					+ "[ERROR] Afin de préserver le monde de la dévastation\n"
-					+ "[ERROR] Afin de rallier tous les peuples à notre nation\n"
-					+ "[ERROR] Afin d'écraser l'amour et la vérité\n"
-					+ "[ERROR] Afin d'étendre notre pouvoir jusqu'à la voie lactée\n"
-					+ "[ERROR] Jessie !\n"
-					+ "[ERROR] James !\n"
-					+ "[ERROR] La Team Rocket plus rapide que la lumière\n"
-					+ "[ERROR] Rendez-vous tous, ou ce sera la guerre\n"
-					+ "[ERROR] Miaouss, oui, la guerre !\n" + e);
+	        TriTableau.triDecroissant(tab1);
+		} catch (IndexOutOfBoundsException e) {
+			logger.warning("Index max depassé \n");
+			fail(e.getMessage());
+		} catch (Exception e) {
+			logger.warning("Erreur");
+			e.printStackTrace();
 		}
+		assertArrayEquals(tab1, tab3);
 	}
 }

@@ -19,7 +19,7 @@ class CalculsTest {
 	 * Initialise les valeurs avant chaque test 
 	 */
 	@BeforeEach // D�clencher cette m�thode avant l'ex�cution
-	void setUp() throws Exception 
+	void setUp() throws Exception
 	{
 		c1 = new Calculs(1,2);
 		c2 = new Calculs(10,20);
@@ -28,9 +28,7 @@ class CalculsTest {
 
 	
 
-	/**
-	 * Test method for {@link Calculs#multiplier()}.
-	 */
+	/** {@link Calculs#multiplier()} */
 	@Test
 	void testMultiplier() 
 	{
@@ -41,43 +39,33 @@ class CalculsTest {
 		
 		// Est ce que (2 == 42) ? non donc : test en Erreur ----- NANI ?
 		assertEquals(c1.multiplier(), 2);
-		
 	}
 
-	/**
-	 * Test method for {@link Calculs#additionner()}.
-	 */
+	/** {@link Calculs#additionner()} */
 	@Test
 	void testAdditionner() {
-		if(c1.additionner() != 3) {
-			fail("Methode additionner non conforme 2 + 1 = 3 ne fonctionne pas.");
+		if(c2.additionner() != 30) {
+			fail("Methode additionner non conforme 10 + 120 = 3 ne fonctionne pas.");
 		}
-		
-		assertEquals(c1.additionner(), 3);
+		assertEquals(c2.additionner(), 30);
 	}
 
-	/**
-	 * Test method for {@link Calculs#diviser()}.
-	 */
+	/** {@link Calculs#diviser()} */
 	@Test
 	void testDiviser() {
 		if(c3.diviser() != (1/2)) {
 			fail("Methode diviser non conforme 100 / 200 = 0.5 ne fonctionne pas.");
 		}
-		
 		assertEquals(c3.diviser(), (1/2));
 	}
 
-	/**
-	 * Test method for {@link Calculs#soustraire()}.
-	 */
+	/** {@link Calculs#soustraire()} */
 	@Test
 	void testSoustraire() {
-		if(c2.soustraire() != -10) {
-			fail("Methode soustraire non conforme 10 - 20 = -10 ne fonctionne pas.");
+		if(c1.soustraire() != -1) {
+			fail("Methode soustraire non conforme 1 - 2 = -1 ne fonctionne pas.");
 		}
-		
-		assertEquals(c2.soustraire(), -10);
+		assertEquals(c1.soustraire(), -1);
 	}
 
 }
