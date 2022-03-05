@@ -1,6 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import jenkins.TriTableau;
+import data.TriTableau;
 
 import java.util.logging.Logger;
 

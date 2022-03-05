@@ -1,5 +1,5 @@
 
-package jenkins;
+package data;
 
 public class Calculs
 {

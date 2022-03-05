@@ -1,7 +1,7 @@
 
 /*** classe TriTableau.java ***/
 
-package jenkins;
+package data;
 
 import java.io.IOException;
 
